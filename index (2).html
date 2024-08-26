@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <script>
+      function showclock()
+      {
+        var dt = new Date();
+        var time = dt.toLocaleTimeString();
+        
+        
+        document.getElementById("clock").innerHTML = time;
+        
+        setTimeout(showclock , 1000 );
+        
+      }
+      function showclock1()
+      {
+        var dt = new Date();
+        var time = dt.toLocaleDateString();
+        
+        
+        document.getElementById("clock").innerHTML = time;
+        
+        setTimeout(showclock , 1000 );
+        
+      }
+    </script>
+    
+    <style>
+      #outer {
+        width: 100%;
+        height: 100%;
+        
+        padding-top: 200px;
+        
+      }
+      body {
+        background-image: url(moon.jpg ) ;       
+      }
+      #box 
+      {
+        width: 950px;
+        height: 200px;
+       background: alternate;
+        background-size: cover;
+        border-radius: (auto);
+        box-shadow: 5px 10px 10px 10px black;
+        margin: 0px ;
+        
+
+      }
+      #box h1 {
+        text-align: center;
+        font-size: 40px;
+        padding-top: -10px;
+        color: white;
+        flex-direction: row;
+        clip-path: fill-box;
+          
+        font-family: "DM Serif Text";
+        font-size: 70px;
+        
+      
+      }
+      #m{
+        margin-top: 100px;
+      }
+      
+    </style>
+    
+  </head>
+  <body onload="showclock1()"><center> 
+    <div class="a"> 
+    <div id="outer">
+    
+      <div id="box">  <font  size="8" face="algerian" color="pink" style="border-radius: 0%; border: 5px solid black; background: top;">time mt dekho bhai bahut kharab hai </font>  
+      <marquee weight="300px" scrollamount="30" style="margin-right: 100px;" >  <h1 id="clock">   </h1></marquee>
+        
+      </div>
+    
+    </div></div>
+    </center>
+  </body>
+</html>
